@@ -17,7 +17,7 @@ class App extends Component {
      <div>
          VK.init(
             apiId: 6469437
-         ):
+         );
      </div>
     );
   }
