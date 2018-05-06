@@ -15,9 +15,7 @@ class App extends Component {
         </p>
       </div> */
      <div>
-         VK.init(
-            apiId: 6469437
-         );
+         <h1>Hello word</h1>
      </div>
     );
   }
