@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import WorksheetSelector from './Worksheet_selector.js';
+class App extends React.Component {
 
-class App extends Component {
-  render() {
-    return (
-     /* <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div> */
-     <div className="App">
-         <h1>Hello word</h1>
-     </div>
-    );
-  }
+    constructor(props) {
+        super();
+        this.state = {loadWorksheep: false};
+    }
+
+    loadStuff = () => {
+        this.setState({loadWorksheep: true});
+    }
+
+    render() {
+        const startPage = (
+            <div className="App">
+                <h1>Приложение "Агрегатор Анкет" позволяет просматривать записи со стены выбранного сообщества</h1>
+                <button onClick={this.loadStuff}>Начать</button>
+            </div>
+        );
+
+        return (<div>{ this.state.loadWorksheep ? <WorksheetSelector/> : startPage }</div>);
+
+    }
 }
+
 
 export default App;
