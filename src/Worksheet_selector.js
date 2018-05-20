@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
+
 export default function WorksheetSelector(props) {
+
+    const VK = window.VK;
 
     // Load groups
     let groupsList = [
